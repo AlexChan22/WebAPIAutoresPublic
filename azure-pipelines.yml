@@ -14,7 +14,8 @@ variables:
   proyecto: 'WebAPIAutores/WebAPIAutores.csproj'
 
 steps:
-displayName: 'Instalar .NET 6'
+- task: UseDotNet@2
+  displayName: 'Instalar .NET 6'
   inputs:
     packageType: 'sdk'
     version: '6.0.x'

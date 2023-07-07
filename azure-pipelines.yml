@@ -14,12 +14,10 @@ variables:
   proyecto: 'WebAPIAutores/WebAPIAutores.csproj'
 
 steps:
-- task: UseDotNet@2
-  displayName: 'Instalando Preview ASP.NET Core 6'
+displayName: 'Instalar .NET 6'
   inputs:
     packageType: 'sdk'
-    version: '6.0.100-preview.4.21255.9'
-    includePreviewVersions: true
+    version: '6.0.x'
 - script: dotnet build --configuration $(buildConfiguration)
   displayName: 'dotnet build $(buildConfiguration)'
 - task: CmdLine@2
